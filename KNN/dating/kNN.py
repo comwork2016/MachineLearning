@@ -78,15 +78,15 @@ def classfyPerson():
 	classifierResult = classify0((inArr-minVals)/ranges,normMat,datingLabels,3)
 	print "You will probably like this person: ",resultList[classifierResult-1]
 
+def showScatter():
+	datingDataMat,datingLabels = file2matrix('datingTestSet2.txt')
+	fig = plt.figure()
+	ax = fig.add_subplot(111) # draw picture of 1 row and 1 col as the 1st sub_picture
+	ax.scatter(datingDataMat[:,0],datingDataMat[:,1],15.0*array(datingLabels),15.0*array(datingLabels))
+	#ax.scatter(x,y,size,color)
+	plt.show()
 
-
-'''
-fig = plt.figure()
-ax = fig.add_subplot(111) # draw picture of 1 row and 1 col as the 1st sub_picture
-#ax.scatter(datingDataMat[:,1],datingDataMat[:,2])
-ax.scatter(datingDataMat[:,0],datingDataMat[:,1],15.0*array(datingLabels),15.0*array(datingLabels))
-plt.show()
-'''
-
+#showScatter()
 #datingCalssTest()
-classfyPerson()
+#classfyPerson()
+
